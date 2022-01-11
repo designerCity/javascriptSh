@@ -28,7 +28,6 @@ members.forEach(function(member, i, arr) {
 
 // map method : forEach 와 거의 비슷함.
 // 다른 점 : 새로운 배열을 return 함.
-// 작동이 되지 않는다..?
 
 const fullName = members.map(function(member, i) {
   return lastNames[i] + member
