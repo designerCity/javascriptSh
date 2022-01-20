@@ -1,6 +1,6 @@
 // Constructor Function ( 생성자 함수 )
 // 객체 생성시에 new 를 붙여서 호출해줘야 한다.
-// 함수의 이름의 첫 번째 글자를 대문자로 적어줘야 한다. (관습이다.)
+// 함수의 이름의 첫 번째 글자를 대문자로 적어줘야 한다. (관습임)
 
 // this = Constructor Function으로 생성하는 해당 객체를 가리킴
 function User(email, birthdate) {
