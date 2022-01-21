@@ -1,5 +1,5 @@
 // 상속 : 하나의 객체가 다른 객체의 프로퍼티와 메소드를 물려받는 것
-  // 장점 : 코드의 재사용성이 좋아진다. 
+    // 장점 : 코드의 재사용성이 좋아진다. 
 // 부모 class : base 가 되는 class 
 class User {
   constructor(email, birthdate) {
