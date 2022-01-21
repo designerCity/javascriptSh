@@ -42,5 +42,4 @@ user1.email = 'SeHyeung@nate.com'
 console.log(user1._email); // SeHyeung@nate.com
 console.log(user1.email); // Email Address is SeHyeung@nate.com
 // console.log(user1.email) 는 getter method 가 실행됨으로 인해 결과값이 다르다. 
-console.log(constructor)
 
