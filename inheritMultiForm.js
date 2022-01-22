@@ -40,7 +40,42 @@ console.log(pUser1.level);
 pUser1.buy(item);
 pUser1.streamMusicForFree();
 
+// 부모 class 의 method 를 상속하는 방법 
+class User {
+  constructor(email, birthdate) {
+    this.email = email;
+    this.birthdate = birthdate;
+  }
+  
+  buy(item) {
+    console.log(`${this.email} buys ${item.name}`);
+  }
+}
+class PremiumUser extends User {
+  constructor(email, birthdate, level, point) {
+    super(email, birthdate)
+    this.level = level;
+    this.point = point;
+  }
+  buy(item) {
+    // console.log(`${this.email} buys ${item.name}`) 이 내용은 User 의 buy method 와 같으므로
+    super.buy(item); // 이렇게 부모의 method 가 필요할 때는 이렇게 써도 된다. 
+    this.point += item.price * 0.05
+  }
+  streamMusicForFree() {
+    console.log(`Free music streaming for ${this.email}`)
+  }
+}
+const item = {
+  name: '스웨터',
+  price: 30000,
+}
 
+const user1 = new User('tpgud777@nate.com', '19990425')
+const pUser1 = new PremiumUser('tpgud777@nate.com', '19990425')
+
+user1.buy(item)
+pUser1.buy(item)
 
 // 다형성 : 많은 형태를 갖고 있는 성질, 하나의 변수가 다양한 종류의 객체를 가리킬 수 있는 성질. 
 
