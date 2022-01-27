@@ -58,6 +58,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
   // JSON 은 JSON data 를 다루기 위해서 사용되는 JS 의 기본 객체이다.
   
 
-
+// Serialization(직렬화) : 자바스크립트 객체를 string 타입의 JSON 데이터로 변환하는 작업(리퀘스트를 보낼 때)
+// Deserialization(역직렬화) : string 타입의 JSON 데이터를 자바스크립트 객체로 변환하는 작업(리스폰스를 받았을 때)
 
 
