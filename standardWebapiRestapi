@@ -1,0 +1,35 @@
+// // Web API : 어느 URL로 어떤 리퀘스트를 보냈을 때, 무슨 처리가 수행되고 어떤 리스폰스가 오는지에 관해 미리 정해진 규격을
+// // API(Application Programming Interface) : 개발할 때 사용할 수 있도록 특정 라이브러리나 플랫폼 등이 제공하는 데이터나 함수 등
+
+
+// // REST API는 오늘날 많은 웹 개발자들이 Web API 설계를 할 때, 준수하기 위해 노력하는 일종의 가이드라인
+// // REST는 Representational State Transfer(표현적인 상태 이전)
+
+
+// // // REST architecture 의 기준
+
+// // 1. Client-Server : Client-Server 구조를 통해 양측의 관심사를 분리
+// // 2. Stateless :  Client가 보낸 각 리퀘스트에 관해서 Server는 그 어떤 맥락(context)도 저장하지 않습니다.
+//                 // 매 리퀘스트는 각각 독립적인 것으로 취급된다는 뜻
+// // 3. Cache : Cache를 활용해서 네트워크 비용을 절감해야 합니다. Server는 리스폰스에, Client가 리스폰스를 재활용해도 되는지 여부(Cacheable)를 담아서 보내야함.
+
+// // 4. Uniform Interface : 
+//     // 하위 조건 : 
+//         4 - 1) identification of resources
+//                   URL은 리소스를 나타내기 위해서만 사용하고, 리소스에 대한 처리는 메소드로 표현해야 
+//                   도큐먼트는 단수 명사로, 컬렉션은 복수 명사로 표시합니다.
+//         4 - 2) manipulation of resources through representations : Client와 Server는 둘 다 리소스를 직접적으로 다루는 게 아니라 리소스의 '표현(representations) 을 다줘야 함.
+//                                                                     '리소스'와 '리소스의 표현'이라는 개념 2개를 서로 엄격하게 구분
+//         4 - 3) self-descriptive messages : tateless 조건 때문에 Client는 매 리퀘스트마다 필요한 모든 정보를 담아서 전송해야 함.
+//                                             Client의 리퀘스트와 Server의 리스폰스 모두 그 자체에 있는 정보만으로 모든 것을 해석할 수 있어야 한다는 뜻.
+//         4 - 4) hypermedia as the engine of application state : 리스폰스에는 리소스의 표현, 각종 메타 정보들뿐만 아니라 계속 새로운 상태로 넘어갈 수 있도록 해주는 링크들도 포함되어 있어야 함.
+// // 5. Layered System : Client와 Server 사이에는 프록시(proxy), 게이트웨이(gateway)와 같은 중간 매개 요소를 두고, 보안, 로드 밸런싱 등을 수행할 수 있어야 합니다. 이를 통해 Client와 Server 사이에는 계층형 층(hierarchical layers)들이 형성됩니다.
+// // 6. Code on Demand :lient는 받아서 바로 실행할 수 있는 applet이나 script 파일을 Server로부터 받을 수 있어야 함.
+//       (Optional)
+
+// resource 의 종류 
+// 컬렉션(collection) : 여러 개의 '도큐먼트'를 담을 수 있는 리소스
+// 도큐먼트(document) : 보통 우리가 하나의 객체로 표현할 수 있는 리소스
+
+
+// OST 리퀘스트를 보낼 때, 컬렉션(members) 타입의 리소스를 대상으로 작업을 수행한다는 점
