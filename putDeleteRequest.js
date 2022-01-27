@@ -1,3 +1,5 @@
+// // PUT request 활용
+
 // // id 2 번의 부서를 engineering 에서 marketing 으로 바꾸기 
 // const member = {
 //   name: 'Alice',
@@ -13,13 +15,15 @@
 //   .then((result) => { console.log(result); });
 
 
+
+// DELETE request
+
 // DELETE request 를 사용해서, id 가 2 번인 data 삭제 
 fetch('https://learn.codeit.kr/api/members/2', {
   method: 'DELETE',
 }) 
   .then((response) => response.text())
   .then((result) => { console.log(result); });
-
 
 
 // // // id 값을 모를 때
