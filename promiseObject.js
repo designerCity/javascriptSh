@@ -79,3 +79,10 @@ btn.addEventListener('click', (e) => {
         
 
 
+console.log('Start!')
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.text()) // 작업 성공 결과는 response 에 넘어오게 된다. 이때 실행할 callback 이 response.text() 이다. 
+  .then((result) => { console.log(result); }); // 윗 줄의 작업 성공 결과가 첫 번째 파라미터인 result 에 담기는 것이다. 
+  // then method 는 promise 객체의 method 이다.
+  // promise 객체가 pending 상태에서 fullfiled 상태(request 에 대한 response 를 받았을 때)가 될 때 실행할 콜백을 등록하는 method 이다. 
+console.log('End!')
