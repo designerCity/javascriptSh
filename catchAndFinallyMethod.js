@@ -29,3 +29,26 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 // catch 메소드를 Promise Chain의 마지막에 늘 써줘야 하는 것은 맞지만, 작업을 살릴 방법이 있다면 Promise Chain 중간에 catch 메소드를 써도 된다.
+
+
+
+// promise 객체에는 then mehtod, catch method, finally method 가 있다. 
+
+// finally method : 어떤 작업이 성공(fullfilled)하던 실패(rejected)하던 간에 상관없이 항상 실행하고 싶은 callback 
+// finally method 의 파라미터로 작업 성공 결과를 받을 때
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.text()) 
+  .then((result) => { console.log(result) })
+  .catch((error) => { console.log(error) })
+  .finally(() => { console.log('exit') }) // 안의 callback 은 작업성공 결과나 작업 실패 정보가 필요하지 않기에 파라미터가 필요 없다.
+ 
+
+// finally method 의 파라미터로 작업 실패 정보를 받을 때
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.text()) 
+  .then((result) => { console.log(result) })
+  .catch((error) => { 
+    console.log(error) 
+    throw new Error('from catch method')
+  })
+  .finally(() => { console.log('exit') })
