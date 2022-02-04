@@ -4,7 +4,7 @@
 
 // executor 함수 :
 // 위 Promise 객체 안의 파라미터 함수인 (resolve, reject) => {
-// }  이 부분
+// }  이 부분이 executor 함수이다.
 
 // executor 함수의 resolve 파라미터 : 생성될 Promise 객체를 fullfilled 상태로 만들 수 있는 함수가 연결된다. 
 // executor 함수의 reject 파라미터 : 생성될 Promise 객체를 rejected 상태로 만들 수 있는 함수가 연결된다. 
