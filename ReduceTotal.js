@@ -12,4 +12,4 @@ const totalCareer = data.reduce((acc, el, i) => {
   return el.month + acc;
 },0)
 
-console.log(`세형이의 경력은 총 ${totalCareer}개월입니다.`);
+console.log(`세형이의 경력은 총 ${totalCareer}개월입니다.`)
