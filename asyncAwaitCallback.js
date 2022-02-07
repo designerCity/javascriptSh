@@ -33,6 +33,9 @@ async function fetchAndPrint() {
   const result = await response.text();
   console.log(result);
 }
+
+
+
 // await keyword : async 함수 안에서만 사용이 가능하다. 
 //                 await keyword 를 만나게 되면, 함수 바깥으로 실행 흐름이 바뀐다. 
 // 실행 순서는 숫자 순서대로 실행이 된다. 
@@ -75,6 +78,7 @@ fetchAndPrint();
 
 
 
+
 // async 함수는 항상 Promise object 를 리턴한다.
 
 async function fetchAndPrint() {
@@ -102,6 +106,11 @@ fetchAndPrint();
 
 // 이 말은 async 함수 내부에서 error 가 발생해도 rejected 상태이면서, 해당 에러 갹체를 작업 실패 정보로 가진,
 // Promise obj 를 리턴한다는 말이다. 
+
+
+
+
+
 
 
 // async 함수 안의 async 함수 
@@ -142,8 +151,6 @@ async function getUsers() {
 
 // 사용방법 Promise가 반환되기 때문에 .then() 블럭을 사용해야한다.
 getUsers().then((result) => { console.log(result); });
-
-
 
 
 
@@ -216,8 +223,7 @@ const example3_2 = async (a, b) => a + b;
 
 
 
-
-// async 을 활용한 효율적인 반복문 : 순차적인 처리 필요 X 면 각 작업을 다시 async 함수로 묶어주면 된다. 
+// async 을 활용한 효율적인 반복문 : 순차적인 처리 필요하지 않으면 각 작업을 다시 async 함수로 묶어주면 된다. 
 
 async function getResponses(urls) {
   for(const url of urls){
