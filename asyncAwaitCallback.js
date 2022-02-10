@@ -1,5 +1,6 @@
 // async & await 
 
+
 // async (asynchronous : 비동기 의 줄임말)  : 함수 안에 비동기로 실행될 부분이 있다라는 것을 의미한다. 
 // await : 그 뒤의 code 를 실행하고, 그 code 가 리턴하는 Promise 객체가 fullfilled 상태가 될 때까지 기다려준다. 
 
