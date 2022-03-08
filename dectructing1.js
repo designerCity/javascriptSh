@@ -23,10 +23,12 @@ let macbook = '지완';
 let ipod = '세형';
 
 console.log('macbook 소유', macbook);
+// macbook 소유 지완
 console.log('ipod 소유', ipod);
+// ipod 소유 세형
 
 // destructing 을 이용한 변수 교환s
 [macbook, ipod] = [ipod, macbook]
 
-console.log('macbook 소유', macbook);
-console.log('ipod 소유', ipod);
+console.log('macbook 소유', macbook); // macbook 소유 세형
+console.log('ipod 소유', ipod); // ipod 소유 지완
